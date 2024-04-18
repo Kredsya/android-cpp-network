@@ -3,7 +3,7 @@
 ```shell
 $ mkdir build
 $ cd build
-$ cmake -DCMAKE_TOOLCHAIN_FILE=Android32.cmake ..
+$ cmake ..
 $ make
 $ adb push hello /data/local/tmp
 
