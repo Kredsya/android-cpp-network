@@ -1,1 +1,22 @@
 # android-cross-compile
+
+```shell
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_TOOLCHAIN_FILE=Android32.cmake ..
+$ make
+$ adb push hello /data/local/tmp
+
+# in adb shell
+$ ./hello
+```
+
+## 시행착오
+
+set(CMAKE_SYSTEM_VERSION "25")
+
+API 버전을 넣는 곳이고, 제가 가지고 있는 갤럭시 S7 엣지의 플랫폼 버전은 Android 7.1.2로 API Level 25입니다.
+
+하지만 Qt에는 API 25 버전이 없었고, [api-error.log]() 링크 에러가 발생했습니다.
+
+이는 24 버전으로 바꾸어서 해결하였습니다.
