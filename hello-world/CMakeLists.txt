@@ -1,6 +1,3 @@
-# mkdir build && cd build
-# cmake [-DBIT=<32|64>] ..
-
 cmake_minimum_required(VERSION 3.29)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}")
