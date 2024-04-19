@@ -39,7 +39,7 @@ $ termux-elf-cleaner --api-level ${CMAKE_SYSTEM_VERSION} ${BINARY_NAME}
 $ adb push ${BINARY_NAME} /data/local/tmp
 ```
 
-# 시행착오
+# Troubleshooting
 
 `set(CMAKE_SYSTEM_VERSION 25)`
 
