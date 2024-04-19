@@ -1,4 +1,8 @@
-# android-cross-compile
+# Main Experience
+
+CMake Cross Compiling for Android with the NDK
+
+# Usage
 
 ```shell
 $ mkdir build
@@ -7,6 +11,7 @@ $ cmake ..
 $ make install
 
 # in adb shell
+hero2lte:/ $ cd /data/local/tmp
 hero2lte:/data/local/tmp $ ./hello-64
 Hello, World! 8
 ```
