@@ -1,5 +1,5 @@
 # mkdir build && cd build
-# cmake -DBIT=<32|64> ..
+# cmake [-DBIT=<32|64>] ..
 
 cmake_minimum_required(VERSION 3.29)
 
