@@ -10,8 +10,11 @@ $ adb push hello /data/local/tmp
 # in adb shell
 $ ./hello
 ```
+# change between 64bit and 32bit
 
-## 시행착오
+modify `include(Android32)` of [CMakeLists.txt:4](CMakeLists.txt) to `Android32` or `Android64`
+
+# 시행착오
 
 set(CMAKE_SYSTEM_VERSION "25")
 
