@@ -5,7 +5,6 @@ include(AndroidCrossCompile)
 
 project(hello-${BIT})
 
-set(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_NAME})
 add_executable(${CMAKE_PROJECT_NAME} hello-world.c)
 
 install(CODE "execute_process(COMMAND termux-elf-cleaner --api-level ${CMAKE_SYSTEM_VERSION} ${CMAKE_PROJECT_NAME})")
