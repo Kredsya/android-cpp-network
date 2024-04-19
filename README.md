@@ -50,5 +50,6 @@ API 버전을 넣는 곳이고, 제가 가지고 있는 갤럭시 S7 엣지의 �
 1. [Cross Compiling for Android](https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-android)
 1. [android.toolchain.cmake](https://android.googlesource.com/platform/ndk/+/master/build/cmake/android.toolchain.cmake)
 1. [cmake-10-모듈](https://keunjun.blog/2018/10/07/cmake-10-%EB%AA%A8%EB%93%88/)
-1. [cmake install](https://cmake.org/cmake/help/latest/command/install.html#code)
+1. [CMake install](https://cmake.org/cmake/help/latest/command/install.html#code)
+1. [CMake execute_process](https://cmake.org/cmake/help/latest/command/execute_process.html)
 1. [termux-elf-cleaner](https://github.com/termux/termux-elf-cleaner)
