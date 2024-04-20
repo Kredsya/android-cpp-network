@@ -1,0 +1,40 @@
+CMake Deprecation Warning at CMakeLists.txt:7 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at CMakeLists.txt:16 (cmake_policy):
+  The OLD behavior for policy CMP0042 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+WARNING,We couldn't find DPDK with pkg-config.  If you want DPDK support,
+make sure that pkg-config is installed, that DPDK 18.02.2 or later is
+installed, and that DPDK provides a .pc file.
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+_libfullpath
+    linked by target "pcap" in directory /home/kredsya/study/libpcap-1.10.4
+    linked by target "findalldevstest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "capturetest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "filtertest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "findalldevstest-perf" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "reactivatetest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "can_set_rfmon_test" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "writecaptest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "selpolltest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "threadsignaltest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "opentest" in directory /home/kredsya/study/libpcap-1.10.4/testprogs
+    linked by target "fuzz_filter" in directory /home/kredsya/study/libpcap-1.10.4/testprogs/fuzz
+    linked by target "fuzz_pcap" in directory /home/kredsya/study/libpcap-1.10.4/testprogs/fuzz
+    linked by target "fuzz_both" in directory /home/kredsya/study/libpcap-1.10.4/testprogs/fuzz
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
