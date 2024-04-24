@@ -12,8 +12,7 @@ void blockArp(TxArpPacket &request, std::string my_mac, uint32_t gatewayIp) {
     // send arp request to all ip
     // assumption : subnet mask is 255.255.255.0
 
-    // request.ethhdr.parseDst("FF:FF:FF:FF:FF:FF");
-    request.ethhdr.parseDst(my_mac);
+    request.ethhdr.parseDst("FF:FF:FF:FF:FF:FF");
     request.ethhdr.parseSrc(my_mac);
     request.ethhdr.type_ = EthHdr::arp;
     request.arphdr = {
