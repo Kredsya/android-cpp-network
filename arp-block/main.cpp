@@ -8,11 +8,12 @@ void fastio() {
     std::cout.tie(0);
 }
 
-void blockArp(std::string my_mac, uint32_t gatewayIp) {
+void blockArp(TxArpPacket &request, std::string my_mac, uint32_t gatewayIp) {
     // send arp request to all ip
     // assumption : subnet mask is 255.255.255.0
-    TxArpPacket request;
-    request.ethhdr.parseDst("FF:FF:FF:FF:FF:FF");
+
+    // request.ethhdr.parseDst("FF:FF:FF:FF:FF:FF");
+    request.ethhdr.parseDst(my_mac);
     request.ethhdr.parseSrc(my_mac);
     request.ethhdr.type_ = EthHdr::arp;
     request.arphdr = {
@@ -58,9 +59,11 @@ int main(int argc, char *argv[]) {
     };
 
     std::string gatewayStr = resolveGatewayIp();
-    sscanf(gatewayStr.c_str(), "%d.%d.%d.%d", &ipmask[0], &ipmask[1], &ipmask[2], &ipmask[3]);
+    sscanf(gatewayStr.c_str(), "%d.%d.%d.%d", &ipmask[3], &ipmask[2], &ipmask[1], &ipmask[0]);
 
-    blockArp(my_mac, gatewayIp);
+    TxArpPacket request;
+    blockArp(request, my_mac, gatewayIp);
+    rxPacket->sendPkt(&request);
 
     return 0;
 }

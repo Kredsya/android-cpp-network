@@ -20,5 +20,12 @@ void RxPacket::parse() {
     }
 }
 
-bool sendPkt(TxArpPacket *) {
+bool RxPacket::sendPkt(TxArpPacket *packet) {
+    int res = pcap_sendpacket(handle, reinterpret_cast<const u_char *>(packet), sizeof(TxArpPacket));
+    if (res) {
+        std::cerr << "pcap_sendpacket return " << res << '\n';
+        std::cerr << pcap_geterr(handle) << '\n';
+        return false;
+    }
+    return true;
 }

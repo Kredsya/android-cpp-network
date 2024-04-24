@@ -8,6 +8,11 @@
 
 #pragma pack(push, 1)
 
+struct TxArpPacket {
+    struct EthHdr ethhdr;
+    struct ArpHdr arphdr;
+};
+
 struct RxPacket {
     pcap_t *handle;
     struct pcap_pkthdr *header;
@@ -28,11 +33,6 @@ struct RxPacket {
     bool openPcap(const char *);
     void parse();
     bool sendPkt(TxArpPacket *);
-};
-
-struct TxArpPacket {
-    struct EthHdr ethhdr;
-    struct ArpHdr arphdr;
 };
 
 #pragma pack(pop)
