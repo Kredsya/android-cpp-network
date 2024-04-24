@@ -15,8 +15,8 @@ struct EthHdr {
     uint8_t *src() { return src_; }
     uint16_t type() { return ntohs(type_); }
 
-    void parseDst(std::string str) { sscanf(str.c_str(), "%x:%x:%x:%x:%x:%x", &dst_[0], &dst_[1], &dst_[2], &dst_[3], &dst_[4], &dst_[5]); };
-    void parseSrc(std::string str) { sscanf(str.c_str(), "%x:%x:%x:%x:%x:%x", &src_[0], &src_[1], &src_[2], &src_[3], &src_[4], &src_[5]); };
+    void parseDst(std::string str) { sscanf(str.c_str(), "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx", &dst_[0], &dst_[1], &dst_[2], &dst_[3], &dst_[4], &dst_[5]); };
+    void parseSrc(std::string str) { sscanf(str.c_str(), "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx", &src_[0], &src_[1], &src_[2], &src_[3], &src_[4], &src_[5]); };
 
     enum : uint16_t {
         arp = 0x0806,

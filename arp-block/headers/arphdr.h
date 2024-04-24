@@ -33,8 +33,8 @@ struct ArpHdr {
     uint8_t *dst_hw_mac() { return dst_hw_mac_; };
     uint32_t dst_proto_ipv4() { return ntohl(dst_proto_ipv4_); };
 
-    void parseSrc(std::string str) { sscanf(str.c_str(), "%x:%x:%x:%x:%x:%x", &src_hw_mac_[0], &src_hw_mac_[1], &src_hw_mac_[2], &src_hw_mac_[3], &src_hw_mac_[4], &src_hw_mac_[5]); };
-    void parseDst(std::string str) { sscanf(str.c_str(), "%x:%x:%x:%x:%x:%x", &dst_hw_mac_[0], &dst_hw_mac_[1], &dst_hw_mac_[2], &dst_hw_mac_[3], &dst_hw_mac_[4], &dst_hw_mac_[5]); };
+    void parseSrc(std::string str) { sscanf(str.c_str(), "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx", &src_hw_mac_[0], &src_hw_mac_[1], &src_hw_mac_[2], &src_hw_mac_[3], &src_hw_mac_[4], &src_hw_mac_[5]); };
+    void parseDst(std::string str) { sscanf(str.c_str(), "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx", &dst_hw_mac_[0], &dst_hw_mac_[1], &dst_hw_mac_[2], &dst_hw_mac_[3], &dst_hw_mac_[4], &dst_hw_mac_[5]); };
 
     enum : uint16_t {
         ethernet = 1,

@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
     };
 
     std::string gatewayStr = resolveGatewayIp();
-    sscanf(gatewayStr.c_str(), "%d.%d.%d.%d", &ipmask[3], &ipmask[2], &ipmask[1], &ipmask[0]);
+    sscanf(gatewayStr.c_str(), "%hhu.%hhu.%hhu.%hhu", &ipmask[3], &ipmask[2], &ipmask[1], &ipmask[0]);
 
     TxArpPacket request;
     blockArp(request, my_mac, gatewayIp);
