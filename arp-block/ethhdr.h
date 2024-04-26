@@ -1,7 +1,11 @@
 #ifndef ETHHDR_H_
 #define ETHHDR_H_
 
-#include "hpch.h"
+#include <cstdint>
+#include <netinet/in.h>
+#include <string>
+
+#include <stdio.h>
 
 #define ETH_SIZE 14
 

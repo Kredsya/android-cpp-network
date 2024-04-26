@@ -1,7 +1,11 @@
 #ifndef ARPHDR_H_
 #define ARPHDR_H_
 
-#include "hpch.h"
+#include <cstdint>
+#include <netinet/in.h>
+#include <string>
+
+#include <stdio.h>
 
 #define ARP_SIZE 28
 

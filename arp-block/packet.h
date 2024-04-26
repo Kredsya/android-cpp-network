@@ -1,10 +1,14 @@
 #ifndef PACKET_H_
 #define PACKET_H_
 
-#include "pch.h"
+// C++
+#include <iostream>
 
-#include "headers/arphdr.h"
-#include "headers/ethhdr.h"
+// libpcap
+#include <pcap.h>
+
+#include "arphdr.h"
+#include "ethhdr.h"
 
 #pragma pack(push, 1)
 
@@ -19,7 +23,6 @@ struct RxPacket {
     const uint8_t *bytes;
 
     struct EthHdr *ethhdr{nullptr};
-
     struct ArpHdr *arphdr{nullptr};
 
     void clear() {
